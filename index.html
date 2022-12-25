@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Котейки</title>
+    <script
+      src="https://kit.fontawesome.com/3e2b3d0dcf.js"
+      crossorigin="anonymous" defer></script>
+      <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="logo"
+          ><i class="fa-solid fa-shield-cat"></i>Приют для котеек "Отдам в добрые руки"</a
+        >
+        <button class="btn" id="add"><i class="fa-solid fa-plus"></i></button>
+        <button class="btn" id="login">Войти</button>
+      </div>
+    </header>
+    <main class="main container">
+      <section class="cards">
+        <h2 class="visually-hidden">Список котеек</h2>
+        
+    </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <span class="copyright">©2022 Made by USSR</span>
+        <div class="socials">
+            <a class="socials__link"  target="_blank" href="https://github.com/StMihaile"><i class="fa-brands fa-github socials__icon"></i></a>
+            <a class="socials__link"  target="_blank" href="https://vk.com/sipatrov_m"><i class="fa-brands fa-vk socials__icon"></i></a>
+            <a class="socials__link" target="_blank" href="https://t.me/stMihaile"><i class="fa-brands fa-telegram socials__icon"></i></a>
+    </div>
+    </footer>
+    <div class="popup popup-add-cats">
+      <div class="popup__container" >
+          <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+          <h2>Добавить котейку</h2>
+          <form class="form" id="popup-form-cat">
+              <div class="form__image"></div>
+              <input type="number" class="form__input" name="id" min="1" required placeholder="id">
+              <input type="number" class="form__input" name="age" placeholder="Возраст">
+              <input type="text" class="form__input" name="name" required placeholder="Имя">
+              <input type="number" class="form__input" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+              <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
+              <label class="form__checkbox-wrap">
+                  <input type="checkbox" name="favourite" class="form__checkbox " placeholder="">
+                  <span class="form__label">красавчик</span>  
+                  <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
+              </label>
+              <input type="url" class="form__input form__input_image" name="image" placeholder="Ссылка на фото">
+              <button type="submit" class="form__btn btn">добавить</button>
+          </form>
+      </div>
+  </div>
+  <div class="popup popup-login">
+    <div class="popup__container" >
+        <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Авторизация</h2>
+        <form class="form" id="popup-form-login">
+            <input type="email" class="form__input" name="email" required placeholder="email">
+            <input type="password" class="form__input" name="password" placeholder="password">
+            <button type="submit" class="form__btn btn">Войти</button>
+        </form>
+    </div>
+</div>
+
+    <template id="card-template">
+      <div class="card">
+        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14A82/production/_116301648_gettyimages-1071204136.jpg" alt="Изображение" class="card__image">
+        <a href="#" class="card__link"><h3 class="card__name">Kotik</h3></a>
+        <button class="card__like" aria-label="Поставить лайк">
+          <i class="fa-solid fa-heart fa-2x"></i>
+      </button>
+    </div>
+    </template>
+    <script src="./script/api.js" defer></script>
+    <script src="./script/card.js" defer></script>
+    <script src="./script/popup.js" defer></script>
+    <script src="./script/index.js" defer></script>
+  </body>
+</html>
